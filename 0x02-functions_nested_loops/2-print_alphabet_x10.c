@@ -3,7 +3,7 @@
 
 
 /**
- * prints _alphabet_*10 - prints the alpha 10 times
+ * print_alphabet_*10 - prints the alpha 10 times
  *
  * Return: Always 0 (success)
  */

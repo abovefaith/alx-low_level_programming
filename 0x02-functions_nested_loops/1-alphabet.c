@@ -3,7 +3,7 @@
 
 
 /**
- * prints _alphabet - prints the alpha in  lowercase
+ * prints_alphabet - prints the alpha in  lowercase
  *
  */
 
@@ -17,10 +17,8 @@ void print_alphabet(void)
 
 	for (la = 'a'; la <= 'z'; la++)
 
-		_putchar(la)
-
-
-
-			_putchar('\n');
+		_putchar(la);
+	
+	_putchar('\n');
 
 }
