@@ -3,63 +3,33 @@
 
 
 /**
- *
- *  * print_triangle - Prints a triangle of squares according paramet
- *
- *   * @size: The size of the squares triangle
- *
- *    * Return: void(nothing)
- *
- *     */
+ * print_triangle - Prints a triangle of squares according paramet
+ * @size: The size of the squares triangle
+ * Return: void(nothing)
+ */
 
 void print_triangle(int size)
 
 {
+	int x, y, z;
 
-		int x, y, z;
-
-
-
-			if (size <= 0)
-
-					{
-
-								_putchar('\n');
-
-									}
-
-				else
-
-						{
-
-									for (x = 0; x < size; x++)
-
-												{
-
-																for (y = size - x; y > 1; y--)
-
-																				{
-
-																									_putchar(32);
-
-																												}
-
-
-
-																			for (z = 0; z <= x; z++)
-
-																							{
-
-																												_putchar(35);
-
-																															}
-
-
-
-																						_putchar('\n');
-
-																								}
-
-										}
-
+	if (size <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (x = 0; x < size; x++)
+		{
+			for (y = size - x; y > 1; y--)
+			{
+				_putchar(32);
+			}
+			for (z = 0; z <= x; z++)
+			{
+				_putchar(35);
+			}
+			_putchar('\n');
+		}
+	}
 }
