@@ -6,7 +6,7 @@
  * Return: Nothing (void)
  */
 
- void print_times_table(int n)
+void print_times_table(int n)
 {
 	int i, j, k;
 	
@@ -20,8 +20,7 @@
 		{
 			k = i * j;
 			_putchar(44);
-			_putchar(32);
-			
+			_putchar(32);	
 			if (k <= 9)
 			{
 				_putchar(32);
