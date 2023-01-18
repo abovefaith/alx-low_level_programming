@@ -3,7 +3,6 @@
 
 
 /**
- *
  *  * _strcmp - a function that compares two strings.
  *
  *   * @s1: an input string
