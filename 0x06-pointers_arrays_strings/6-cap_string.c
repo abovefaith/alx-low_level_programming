@@ -9,59 +9,49 @@
  *   * @n: Address of the string
  *
  *    * Return: The uppercase @s address
- *
- *     */
+ */
 
 char *cap_string(char *n)
 
 {
+	int i, x;
 
-		int i, x;
+	int cap = 32;
 
-			int cap = 32;
+	int separators[] = {',', ';', '.', '?', '"',
 
-				int separators[] = {',', ';', '.', '?', '"',
+		'(', ')', '{', '}', ' ', '\n', '\t'};
 
-							'(', ')', '{', '}', ' ', '\n', '\t'};
+	for (i = 0; n[i] != '\0'; i++)
 
+	{
 
+		if (n[i] >= 'a' && n[i] <= 'z')
 
-					for (i = 0; n[i] != '\0'; i++)
+		{
 
-							{
+			n[i] = n[i] - cap;
 
-										if (n[i] >= 'a' && n[i] <= 'z')
+		}
 
-													{
+		cap = 0;
 
-																	n[i] = n[i] - cap;
+		for (x = 0; x <= 12; x++)
 
-																			}
+		{
 
+			if (n[i] == separators[x])
 
+			{
 
-												cap = 0;
+				x = 12;
 
+				cap = 32;
 
+			}
 
-														for (x = 0; x <= 12; x++)
+		}
 
-																	{
-
-																					if (n[i] == separators[x])
-
-																									{
-
-																														x = 12;
-
-																																		cap = 32;
-
-																																					}
-
-																							}
-
-															}
-
-						return (n);
-
+	}
+	return (n);
 }

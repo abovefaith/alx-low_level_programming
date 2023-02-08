@@ -9,45 +9,38 @@
  *   * @s: an input string to encode
  *
  *    * Return: An encode string
- *
- *     */
+ */
 
 char *leet(char *s)
 
 {
+	int i = 0, j;
 
-		int i = 0, j;
+	char subs[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'},
 
-			char subs[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'},
+	     str[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 
-			     	     str[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	while (s[i])
 
+	{
 
+		for (j = 0; j < 10; j++)
 
-				while (s[i])
+		{
 
-						{
+			if (s[i] == str[j])
 
-									for (j = 0; j < 10; j++)
+			{
 
-												{
+				s[i] = subs[j];
 
-																if (s[i] == str[j])
+			}
 
-																				{
+		}
 
-																									s[i] = subs[j];
+		i++;
 
-																												}
+	}
 
-																		}
-
-											i++;
-
-												}
-
-
-
-					return (s);
-
+	return (s);
 }
